@@ -24,5 +24,11 @@ namespace Client
         {
             ClientStream.Connect();
         }
+
+        public byte[] Write(byte[] message)
+        {
+            Stream.Write(message);
+            return Stream.Read();
+        }
     }
 }
